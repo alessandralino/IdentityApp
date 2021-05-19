@@ -39,6 +39,7 @@ namespace aspnetidentity3
                    options.UseSqlServer(Configuration.GetConnectionString("aspnetidentityContextConnection")));
 
             services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<aspnetidentityContext>();
 
